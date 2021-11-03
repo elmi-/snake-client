@@ -15,12 +15,19 @@ const connect = function() {
   });
 
   conn.on("connect", () => {
-    console.log("Name: _AE");
+    conn.write("Name: _AE");
   });
+
+  // Move: up
+  // conn.on("connect", () => {
+  //   setInterval(() => {
+  //     conn.write("Move: up");
+  //   }, 500) ;    
+  // });
 
   return conn;
 };
 
-console.log("Connecting ...");
+console.log("Connected");
 
 module.exports = { connect };
