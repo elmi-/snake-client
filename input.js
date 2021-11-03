@@ -32,6 +32,9 @@ const handleUserInput = (data, conn) => {
   case "d":
     conn.write("Move: right");
     break;
+  case "p":
+    conn.write("Say: hsss...");
+    break;
   default:
     console.log("invalid key passed");
   }
