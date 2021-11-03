@@ -14,6 +14,10 @@ const connect = function() {
     console.log(data);
   });
 
+  conn.on("connect", () => {
+    console.log("Name: _AE");
+  });
+
   return conn;
 };
 
