@@ -22,12 +22,10 @@ const connect = function() {
   // conn.on("connect", () => {
   //   setInterval(() => {
   //     conn.write("Move: up");
-  //   }, 500) ;    
+  //   }, 500);
   // });
 
   return conn;
 };
-
-console.log("Connected");
 
 module.exports = { connect };
