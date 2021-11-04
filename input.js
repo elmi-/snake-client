@@ -1,3 +1,5 @@
+const { INPUT_KEYS } = require("./constants");
+
 let connection;
 
 const setupInput = (conn) => {
@@ -17,22 +19,22 @@ const setupInput = (conn) => {
 
 const handleUserInput = (data, conn) => {
   switch (data) {
-  case "\u0003":
+  case INPUT_KEYS.EXIT:
     process.exit();
     break;
-  case "w":
+  case INPUT_KEYS.MOVE_UP_KEY:
     conn.write("Move: up");
     break;
-  case "a":
+  case INPUT_KEYS.MOVE_LEFT_KEY:
     conn.write("Move: left");
     break;
-  case "s":
+  case INPUT_KEYS.MOVE_DOWN_KEY:
     conn.write("Move: down");
     break;
-  case "d":
+  case INPUT_KEYS.MOVE_RIGHT_KEY:
     conn.write("Move: right");
     break;
-  case "p":
+  case INPUT_KEYS.HISS:
     conn.write("Say: hsss...");
     break;
   default:
